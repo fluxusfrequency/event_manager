@@ -5,7 +5,7 @@ class FormLetter
     output_letter = "output/thanks_#{id}.html"
 
     File.open(output_letter, "w") do |file|
-      file.puts @template_letter
+      file.puts form_letter
       file.close
     end
   end

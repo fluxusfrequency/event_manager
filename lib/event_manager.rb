@@ -21,13 +21,11 @@ contents.each do |row|
   form_letter = erb_template.result(binding)
 
   letter_maker = FormLetter.new
-  letter_maker.save_thank_you_letters(id,form_letter)
+  letter_maker.save_thank_you_letters(id, form_letter)
 end
 
 puts "EventManager Initialized!"
 
 regdates = Regdate.new(dates)
-puts "Most popular hour to register:"
-puts regdates.most_popular_hour(dates)
-puts "Most popular day to register:"
-puts regdates.most_popular_day(dates)
+puts "Most popular hour to register: #{regdates.most_popular_hour(dates)}"
+puts "Most popular day to register: #{regdates.most_popular_day(dates)}"
